@@ -14,14 +14,6 @@ const App = () => {
         <p>I am a content bitch HELLO</p>
         <p>I am a content bitch HELLO</p>
         <p>I am a content bitch HELLO</p>
-        <p>I am a content bitch HELLO</p>
-        <p>I am a content bitch HELLO</p>
-        <p>I am a content bitch HELLO</p>
-        <p>I am a content bitch HELLO</p>
-        <p>I am a content bitch HELLO</p>
-        <p>I am a content bitch HELLO</p>
-        <p>I am a content bitch HELLO</p>
-        <p>I am a content bitch HELLO</p>
 
         <p>I am a content bitch HELLO</p>
         <p>I am a content bitch HELLO</p>

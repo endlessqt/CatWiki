@@ -1,9 +1,9 @@
 import React from "react";
-import logo from "../assets/images/CatwikiLogo.svg";
+import { ReactComponent as Logo } from "../assets/images/CatwikiLogo.svg";
 const Header = () => {
   return (
-    <header className="mt-6 md:mt-9">
-      <img src={logo} alt="Cat Wiki Logo" />
+    <header className="py-6 md:pt-7">
+      <Logo fill="#000" title="Cat Wiki Logo" />
     </header>
   );
 };
