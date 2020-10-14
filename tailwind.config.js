@@ -6,6 +6,14 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
+      backgroundImage: (theme) => ({
+        "hero-lg": "url('/HeroImagelg.png')",
+        "hero-md": "url('/HeroImagemd.png')",
+        "hero-sm": "url('/HeroImagesm.png')",
+      }),
+      colors: {
+        "hero-back": "#E3E1DC",
+      },
       borderRadius: {
         layoutDefault: "42px",
       },
