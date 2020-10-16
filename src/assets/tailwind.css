@@ -4,3 +4,9 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer components {
+  .divider {
+    @apply bg-divider-main h-1 mt-1 border-none rounded-layoutDefault w-10;
+  }
+}

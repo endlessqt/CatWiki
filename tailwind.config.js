@@ -13,6 +13,8 @@ module.exports = {
       }),
       colors: {
         "hero-back": "#E3E1DC",
+        "divider-main": "#4D270C",
+        "text-main": "#291507",
       },
       borderRadius: {
         layoutDefault: "42px",

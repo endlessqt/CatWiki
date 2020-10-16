@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer className="bg-black flex-shrink-0 rounded-t-layoutDefault px-7 pt-2 pb-7 sm:px-14 sm:py-7 lg:px-28 flex flex-col  sm:flex-row sm:justify-between text-white">
       <Logo fill="#FFFFFF" title="Cat Wiki Logo" className="w-20 sm:w-32" />
-      <div className="flex items-center justify-center leading-6 text-center mt-3 sm:mt-0">
-        <div className="mr-3  text-lg">&copy;</div>
+      <div className="flex items-center leading-6 text-center mt-3 sm:mt-0">
+        <div className="mr-3  text-lg self-start sm:self-center">&copy;</div>
         <div className="leading-4 sm:leading-6 text-sm md:text-lg ">
           Martynov Anton - devchellenge.io 2020
         </div>

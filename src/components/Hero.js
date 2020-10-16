@@ -1,11 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import utils from "../utils";
+import axios from "axios";
 
-//paddings px-7 sm:px-14  lg:px-28
-const Hero = () => {
+const Hero = ({ cats }) => {
+  const [heroCats, setHeroCats] = useState([]);
+  useEffect(() => {
+    if (cats.length) {
+      //get 4 random cat ids;
+      const catIds = utils.getRandomItems(
+        cats.map((cat) => cat.id),
+        4
+      );
+      const fetchHeroCats = async () => {
+        //fetch all 4 cats info
+        const res = await Promise.all(
+          utils.createRequestArr("breed_id", catIds)
+        );
+        const dataArr = res
+          .flatMap((data) => {
+            return data.data;
+          })
+          .map((arr) => {
+            return {
+              url: arr.url,
+              name: arr.breeds[0].name,
+            };
+          });
+        setHeroCats(dataArr);
+      };
+      fetchHeroCats();
+    }
+  }, [cats]);
   return (
     <div>
       <div className="text-white px-7 sm:px-14 lg:px-28 bg-hero-sm md:bg-hero-md lg:bg-hero-lg bg-cover bg-no-repeat bg-center sm:bg-right rounded-t-layoutDefault">
-        <div className="pt-4 pb-7 md:py-16 w-3/5 lg:w-1/3">
+        <div className="pt-4 pb-7 md:pt-16 md:pb-20  w-3/5 md:w-1/2 lg:w-1/3">
           <svg
             className="w-20 sm:w-32 md:w-48"
             // width="66"
@@ -53,17 +82,31 @@ const Hero = () => {
             Get to know more about your cat breed
           </p>
           <input
-            className="rounded-full px-1 py-2 w-2/3 mt-4 "
+            className="rounded-full px-1 py-2 w-2/3 mt-4 md:mt-12"
             type="text"
             placeholder="search"
           />
         </div>
       </div>
-      <div className="bg-hero-back h-32 px-7 sm:px-14  lg:px-28 rounded-b-layoutDefault">
-        bottom
+      <div className="bg-hero-back px-7 pt-4 md:pt-8 sm:px-14 lg:px-28 rounded-b-layoutDefault text-text-main">
+        <h5 className="font-medium text-xs leading-4 w-1/2 sm:text-lg sm:leading-6">
+          Random Breeds
+        </h5>
+        <hr className="divider md:w-14 md:mt-2" />
+        <div className="flex  mt-5 sm:mt-9 justify-between">
+          <h3 className="font-bold text-lg leading-6  w-2/3 sm:w-1/2 md:text-5xl sm:leading-tight ">
+            66+ Breeds For you to discover
+          </h3>
+          <div className="self-end">
+            <button>click me</button>
+          </div>
+        </div>
+        <div className="mt-6 md:mt-12">cats grid</div>
       </div>
     </div>
   );
 };
+//TODO Input is still mock, there should be component with dropdown(SeartchBar.js);
+//TODO Button is still mock, there shoud be reusable button component
 
 export default Hero;
