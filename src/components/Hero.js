@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import utils from "../utils";
 
 const Hero = ({ cats }) => {
@@ -105,9 +107,10 @@ const Hero = ({ cats }) => {
           {heroCats.map((heroCat) => {
             return (
               <div key={heroCat.id}>
-                <img
+                <LazyLoadImage
                   src={heroCat.url}
                   alt={`${heroCat.name} cat`}
+                  effect="blur"
                   className="object-center object-cover h-32 w-full sm:h-40 md:h-56 rounded-roundedImgSm md:rounded-roundedImgDef"
                 />
                 <div className="mt-3 sm:mt-5 text-xs font-semibold leading-4 sm:leading-6 sm:text-lg">
