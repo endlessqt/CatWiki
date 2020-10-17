@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import utils from "../utils";
-import axios from "axios";
 
 const Hero = ({ cats }) => {
   const [heroCats, setHeroCats] = useState([]);
@@ -16,7 +15,7 @@ const Hero = ({ cats }) => {
         const res = await Promise.all(
           utils.createRequestArr("breed_id", catIds)
         );
-        const dataArr = res
+        const catDataArr = res
           .flatMap((data) => {
             return data.data;
           })
@@ -24,9 +23,10 @@ const Hero = ({ cats }) => {
             return {
               url: arr.url,
               name: arr.breeds[0].name,
+              id: arr.breeds[0].id,
             };
           });
-        setHeroCats(dataArr);
+        setHeroCats(catDataArr);
       };
       fetchHeroCats();
     }
@@ -88,7 +88,7 @@ const Hero = ({ cats }) => {
           />
         </div>
       </div>
-      <div className="bg-hero-back px-7 pt-4 md:pt-8 sm:px-14 lg:px-28 rounded-b-layoutDefault text-text-main">
+      <div className="bg-hero-back px-7 pt-4 pb-12 md:pt-8 md:pb-16 sm:px-14 lg:pb-24 lg:px-28 rounded-b-layoutDefault text-text-main">
         <h5 className="font-medium text-xs leading-4 w-1/2 sm:text-lg sm:leading-6">
           Random Breeds
         </h5>
@@ -101,7 +101,22 @@ const Hero = ({ cats }) => {
             <button>click me</button>
           </div>
         </div>
-        <div className="mt-6 md:mt-12">cats grid</div>
+        <div className="mt-6 md:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-x-3 sm:gap-x-4 md:gap-x-8 lg:gap-x-12 gap-y-6 sm:gap-y-0">
+          {heroCats.map((heroCat) => {
+            return (
+              <div key={heroCat.id}>
+                <img
+                  src={heroCat.url}
+                  alt={`${heroCat.name} cat`}
+                  className="object-center object-cover h-32 w-full sm:h-40 md:h-56 rounded-roundedImgSm md:rounded-roundedImgDef"
+                />
+                <div className="mt-3 sm:mt-5 text-xs font-semibold leading-4 sm:leading-6 sm:text-lg">
+                  {heroCat.name}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

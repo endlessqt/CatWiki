@@ -17,6 +17,8 @@ module.exports = {
         "text-main": "#291507",
       },
       borderRadius: {
+        roundedImgSm: "12px",
+        roundedImgDef: "24px",
         layoutDefault: "42px",
       },
       spacing: {
