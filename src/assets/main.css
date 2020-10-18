@@ -17947,6 +17947,14 @@ video {
   grid-template-rows: none;
 }
 
+.grid-rows-gallerySM{
+  grid-template-rows: repeat(8,minmax(0, 7vw));
+}
+
+.grid-rows-galleryLG{
+  grid-template-rows: repeat(6,minmax(0, 3.5vw));
+}
+
 .row-auto{
   grid-row: auto;
 }
@@ -37425,6 +37433,14 @@ video {
     grid-template-rows: none;
   }
 
+  .sm\:grid-rows-gallerySM{
+    grid-template-rows: repeat(8,minmax(0, 7vw));
+  }
+
+  .sm\:grid-rows-galleryLG{
+    grid-template-rows: repeat(6,minmax(0, 3.5vw));
+  }
+
   .sm\:row-auto{
     grid-row: auto;
   }
@@ -56871,6 +56887,14 @@ video {
 
   .md\:grid-rows-none{
     grid-template-rows: none;
+  }
+
+  .md\:grid-rows-gallerySM{
+    grid-template-rows: repeat(8,minmax(0, 7vw));
+  }
+
+  .md\:grid-rows-galleryLG{
+    grid-template-rows: repeat(6,minmax(0, 3.5vw));
   }
 
   .md\:row-auto{
@@ -76321,6 +76345,14 @@ video {
     grid-template-rows: none;
   }
 
+  .lg\:grid-rows-gallerySM{
+    grid-template-rows: repeat(8,minmax(0, 7vw));
+  }
+
+  .lg\:grid-rows-galleryLG{
+    grid-template-rows: repeat(6,minmax(0, 3.5vw));
+  }
+
   .lg\:row-auto{
     grid-row: auto;
   }
@@ -95767,6 +95799,14 @@ video {
 
   .xl\:grid-rows-none{
     grid-template-rows: none;
+  }
+
+  .xl\:grid-rows-gallerySM{
+    grid-template-rows: repeat(8,minmax(0, 7vw));
+  }
+
+  .xl\:grid-rows-galleryLG{
+    grid-template-rows: repeat(6,minmax(0, 3.5vw));
   }
 
   .xl\:row-auto{

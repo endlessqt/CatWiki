@@ -1,10 +1,11 @@
 import React from "react";
-//* FONT SIZE ALWAYS GOES TO ADDITIONAL STYLES
 const TextParagraph = ({ text, additionalStyles }) => {
   return (
-    <div className={"text-text-main font-medium " + `${additionalStyles}`}>
+    <p
+      className={`text-text-main font-medium text-lg leading-5 ${additionalStyles}`}
+    >
       {text}
-    </div>
+    </p>
   );
 };
 

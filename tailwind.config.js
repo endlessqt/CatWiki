@@ -6,6 +6,10 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
+      gridTemplateRows: {
+        gallerySM: "repeat(8,minmax(0, 7vw))",
+        galleryLG: "repeat(6,minmax(0, 3.5vw))",
+      },
       backgroundImage: (theme) => ({
         "hero-lg": "url('/HeroImagelg.png')",
         "hero-md": "url('/HeroImagemd.png')",
