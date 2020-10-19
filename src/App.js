@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Switch, Route } from "react-router-dom";
+import axios from "axios";
+
 import Main from "./layout/Main";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import FrontPage from "./pages/FrontPage";
-import axios from "axios";
 
 const App = () => {
   const [cats, setCats] = useState([]);
@@ -24,7 +26,11 @@ const App = () => {
     <div className="container mx-auto px-4 md:p-0 flex flex-col h-screen">
       <Header />
       <Main>
-        <FrontPage cats={cats} />
+        <Switch>
+          <Route path="/">
+            <FrontPage cats={cats} />
+          </Route>
+        </Switch>
       </Main>
       <Footer />
     </div>

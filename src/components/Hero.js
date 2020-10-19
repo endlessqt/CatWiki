@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import utils from "../utils";
-
+import Button from "./Button";
 const Hero = ({ cats }) => {
   const [heroCats, setHeroCats] = useState([]);
   useEffect(() => {
@@ -96,11 +96,11 @@ const Hero = ({ cats }) => {
         </h5>
         <hr className="divider md:w-14 md:mt-2" />
         <div className="flex  mt-5 sm:mt-9 justify-between">
-          <h3 className="font-bold text-lg leading-6  w-2/3 sm:w-1/2 md:text-5xl sm:leading-tight ">
+          <h3 className="font-bold text-lg leading-6  w-7/12 md:w-2/3 md:text-5xl sm:leading-tight ">
             66+ Breeds For you to discover
           </h3>
           <div className="self-end">
-            <button>click me</button>
+            <Button to="#" text="see more" />
           </div>
         </div>
         <div className="mt-6 md:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-x-3 sm:gap-x-4 md:gap-x-8 lg:gap-x-12 gap-y-6 sm:gap-y-0">
@@ -125,6 +125,6 @@ const Hero = ({ cats }) => {
   );
 };
 //TODO Input is still mock, there should be component with dropdown(SeartchBar.js);
-//TODO Button is still mock, there shoud be reusable button component
+//TODO BUTTON-LINK NEEDS "TO" PROP
 
 export default Hero;
