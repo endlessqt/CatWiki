@@ -6,6 +6,16 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
+      keyframes: {
+        opacityAnime: {
+          "0%": { opacity: "0" },
+          "50%": { opacity: "0.5" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        opacityAnime: "opacityAnime 4.5s ease-in",
+      },
       textOpacity: {
         60: "0.6",
       },
@@ -23,6 +33,7 @@ module.exports = {
         "divider-main": "#4D270C",
         "text-main": "#291507",
         "icon-main": "#7F736A",
+        "back-thing": "#DEC68B",
       },
       borderRadius: {
         roundedImgSm: "12px",

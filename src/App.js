@@ -6,7 +6,7 @@ import Main from "./layout/Main";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import FrontPage from "./pages/FrontPage";
-
+import CatPage from "./pages/CatPage";
 const App = () => {
   const [cats, setCats] = useState([]);
   useEffect(() => {
@@ -27,6 +27,9 @@ const App = () => {
       <Header />
       <Main>
         <Switch>
+          <Route path="/cats/:id">
+            <CatPage />
+          </Route>
           <Route path="/">
             <FrontPage cats={cats} />
           </Route>

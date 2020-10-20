@@ -10,3 +10,18 @@
     @apply bg-divider-main h-1 mt-1 border-none rounded-layoutDefault w-10;
   }
 }
+
+/* @keyframes opacityAnime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opactity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.thing {
+  animation: opacityAnime 5s ease-in;
+} */

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import utils from "../utils";
 import Button from "./Button";
+import SearchBar from "./SearchBar";
 const Hero = ({ cats }) => {
   const [heroCats, setHeroCats] = useState([]);
   useEffect(() => {
@@ -33,10 +35,11 @@ const Hero = ({ cats }) => {
       fetchHeroCats();
     }
   }, [cats]);
+
   return (
     <div>
-      <div className="text-white px-7 sm:px-14 lg:px-28 bg-hero-sm md:bg-hero-md lg:bg-hero-lg bg-cover bg-no-repeat bg-center sm:bg-right rounded-t-layoutDefault">
-        <div className="pt-4 pb-7 md:pt-16 md:pb-20  w-3/5 md:w-1/2 lg:w-1/3">
+      <div className="text-white px-7 sm:px-14 lg:px-28 bg-hero-sm md:bg-hero-md lg:bg-hero-lg bg-cover bg-no-repeat bg-center sm:bg-right lg:bg-top-right  rounded-t-layoutDefault">
+        <div className="pt-4 pb-7 md:pt-16 md:pb-32  w-3/5 md:w-1/2 lg:w-1/3">
           <svg
             className="w-20 sm:w-32 md:w-48"
             // width="66"
@@ -83,11 +86,8 @@ const Hero = ({ cats }) => {
           <p className="font-medium text-xs leading-3 mt-2 sm:mt-3 sm:leading-7 sm:text-lg lg:text-2xl">
             Get to know more about your cat breed
           </p>
-          <input
-            className="rounded-full px-1 py-2 w-2/3 mt-4 md:mt-12"
-            type="text"
-            placeholder="search"
-          />
+
+          <SearchBar />
         </div>
       </div>
       <div className="bg-hero-back px-7 pt-4 pb-12 md:pt-8 md:pb-16 sm:px-14 lg:pb-24 lg:px-28 rounded-b-layoutDefault text-text-main">
@@ -103,7 +103,8 @@ const Hero = ({ cats }) => {
             <Button to="#" text="see more" />
           </div>
         </div>
-        <div className="mt-6 md:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-x-3 sm:gap-x-4 md:gap-x-8 lg:gap-x-12 gap-y-6 sm:gap-y-0">
+        <div className="mt-6 md:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-x-3 sm:gap-x-4 md:gap-x-8 lg:gap-x-12 gap-y-6 sm:gap-y-0 relative">
+          <div className="hidden md:block absolute bg-back-thing top-0 transform -translate-x-3 translate-y-4 w-10 h-48 rounded-roundedImgDef animate-opacityAnime"></div>
           {heroCats.map((heroCat) => {
             return (
               <div key={heroCat.id}>
@@ -114,7 +115,9 @@ const Hero = ({ cats }) => {
                   className="object-center object-cover h-32 w-full sm:h-40 md:h-56 rounded-roundedImgSm md:rounded-roundedImgDef"
                 />
                 <div className="mt-3 sm:mt-5 text-xs font-semibold leading-4 sm:leading-6 sm:text-lg">
-                  {heroCat.name}
+                  <Link to={`/cats/${heroCat.id}`} className="hover:underline">
+                    {heroCat.name}
+                  </Link>
                 </div>
               </div>
             );
@@ -124,7 +127,6 @@ const Hero = ({ cats }) => {
     </div>
   );
 };
-//TODO Input is still mock, there should be component with dropdown(SeartchBar.js);
+//TODO STYLE SEARCH BAR COMPONENT
 //TODO BUTTON-LINK NEEDS "TO" PROP
-
 export default Hero;
