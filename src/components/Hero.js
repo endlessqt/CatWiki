@@ -86,7 +86,6 @@ const Hero = ({ cats }) => {
           <p className="font-medium text-xs leading-3 mt-2 sm:mt-3 sm:leading-7 sm:text-lg lg:text-2xl">
             Get to know more about your cat breed
           </p>
-
           <SearchBar />
         </div>
       </div>

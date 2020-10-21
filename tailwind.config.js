@@ -6,6 +6,17 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
+      maxHeight: {
+        "drop-down-lg": "13rem",
+        "drop-down-sm": "8rem",
+      },
+      inset: {
+        90: "90%",
+        80: "80%",
+        50: "50%",
+        35: "35%",
+        20: "20%",
+      },
       keyframes: {
         opacityAnime: {
           "0%": { opacity: "0" },

@@ -40,6 +40,17 @@ const SearchBar = () => {
   }, 1250);
   return (
     <SelectSearch
+      renderValue={(valueProps) => (
+        <>
+          <input
+            {...valueProps}
+            className="w-full px-4 py-3 sm:h-16 sm:px-9 sm:py-6 rounded-full bg-white text-left outline-none cursor-pointer"
+          />
+          <i className="material-icons text-text-main absolute left-80 top-20 sm:left-90 sm:top-35">
+            search
+          </i>
+        </>
+      )}
       onChange={(value) => {
         history.push(`/cats/${value}`);
       }}
