@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+import Image from "./Image";
 import utils from "../utils";
 import Button from "./Button";
 import SearchBar from "./SearchBar";
@@ -102,22 +101,22 @@ const Hero = ({ cats }) => {
             <Button to="#" text="see more" />
           </div>
         </div>
-        <div className="mt-6 md:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-x-3 sm:gap-x-4 md:gap-x-8 lg:gap-x-12 gap-y-6 sm:gap-y-0 relative">
+        <div className="mt-6 md:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-x-3 sm:gap-x-4 md:gap-x-8 lg:gap-x-12 gap-y-6 sm:gap-y-0 relative">
           <div className="hidden md:block absolute bg-back-thing top-0 transform -translate-x-3 translate-y-4 w-10 h-48 rounded-roundedImgDef animate-opacityAnime"></div>
           {heroCats.map((heroCat) => {
             return (
               <div key={heroCat.id}>
-                <LazyLoadImage
-                  src={heroCat.url}
-                  alt={`${heroCat.name} cat`}
-                  effect="blur"
-                  className="object-center object-cover h-32 w-full sm:h-40 md:h-56 rounded-roundedImgSm md:rounded-roundedImgDef"
-                />
-                <div className="mt-3 sm:mt-5 text-xs font-semibold leading-4 sm:leading-6 sm:text-lg">
-                  <Link to={`/cats/${heroCat.id}`} className="hover:underline">
-                    {heroCat.name}
-                  </Link>
-                </div>
+                <Link to={`/cats/${heroCat.id}`}>
+                  <Image
+                    src={heroCat.url}
+                    alt={`${heroCat.name} cat`}
+                    effect="blur"
+                    styles="object-center object-cover h-32 w-full sm:h-40 md:h-56 rounded-roundedImgSm md:rounded-roundedImgDef"
+                  />
+                  <div className="mt-3 sm:mt-5 text-xs font-semibold leading-4 sm:leading-6 sm:text-lg">
+                    <h4 className="hover:underline">{heroCat.name}</h4>
+                  </div>
+                </Link>
               </div>
             );
           })}
@@ -126,6 +125,6 @@ const Hero = ({ cats }) => {
     </div>
   );
 };
-//TODO STYLE SEARCH BAR COMPONENT
+
 //TODO BUTTON-LINK NEEDS "TO" PROP
 export default Hero;

@@ -9,7 +9,7 @@ const FrontPage = ({ cats }) => {
   return (
     <div>
       <Hero cats={cats} />
-      <div className="flex flex-col sm:flex-row sm:justify-between px-4 pt-14 pb-5 md:pt-24 md:pb-14 xl:pb-6 sm:px-14  lg:px-28 text-text-main">
+      <div className="flex flex-col sm:flex-row sm:justify-between  pt-14 pb-5 md:pt-24 md:pb-14 xl:pb-6 sm:px-14  lg:px-28 text-text-main">
         <div className="w-full  md:mt-14">
           <hr className="divider md:w-16" />
           <h2 className="font-bold text-4xl md:text-5xl leading-tight mt-4">
@@ -19,7 +19,7 @@ const FrontPage = ({ cats }) => {
             text={
               "Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves"
             }
-            additionalStyles={"mt-10 lg:w-10/12"}
+            additionalStyles={"sm:text-lg mt-10 lg:w-10/12"}
           />
 
           <div className="mt-6 lg:mt-16">

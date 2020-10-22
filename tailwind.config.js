@@ -56,6 +56,9 @@ module.exports = {
         9: "2.25rem",
         14: "3.5rem",
         28: "7rem",
+        80: "20rem",
+        88: "22rem",
+        92: "23rem",
       },
       fontFamily: {
         sans: ["Montserrat", "sans-serif"],
