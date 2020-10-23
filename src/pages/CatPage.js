@@ -41,7 +41,7 @@ const CatPage = () => {
     <div>
       <div className="flex flex-col lg:flex-row  mt-3 px-3 sm:pr-14 sm:pl-7 lg:pr-28">
         <div className="relative self-center lg:self-start">
-          <div className="hidden sm:block w-5  h-80 absolute bg-back-thing top-0 transform -translate-x-2  translate-y-7 rounded-roundedImgDef"></div>
+          <div className="hidden md:block w-5  h-80 absolute bg-back-thing top-0 transform -translate-x-2  md:translate-y-5 lg:translate-y-7 rounded-roundedImgDef"></div>
           <Image
             styles="w-full lg:w-92 lg:h-92 rounded-roundedImgSm sm:rounded-roundedImgDef object-cover object-center"
             src={cat.avatar}
@@ -62,7 +62,12 @@ const CatPage = () => {
           </div>
         </div>
       </div>
-      <div>bottom section</div>
+      <div className="mt-10 md:mt-20">
+        <h2 className="text-center sm:text-left font-semibold leading-7 sm:leading-10  text-3xl sm:text-4xl">
+          Other photos
+        </h2>
+        <div className="mt-5 md:mt-10">FOTO GRID</div>
+      </div>
     </div>
   );
 };

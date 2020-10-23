@@ -7,7 +7,15 @@ const Footer = () => {
       <div className="flex items-center leading-6 text-center mt-3 sm:mt-0">
         <div className="mr-3  text-lg self-start sm:self-center">&copy;</div>
         <div className="leading-4 sm:leading-6 text-sm md:text-lg ">
-          Martynov Anton - devchellenge.io 2020
+          <a
+            className="hover:text-gray-500"
+            href="https://github.com/endlessqt"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Martynov Anton
+          </a>{" "}
+          - devchellenge.io 2020
         </div>
       </div>
     </footer>
