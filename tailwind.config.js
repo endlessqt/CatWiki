@@ -6,6 +6,9 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
+      flex: {
+        2: "2 2 0%",
+      },
       maxHeight: {
         "drop-down-lg": "13rem",
         "drop-down-sm": "8rem",
@@ -45,6 +48,8 @@ module.exports = {
         "text-main": "#291507",
         "icon-main": "#7F736A",
         "back-thing": "#DEC68B",
+        "rating-false": "#E0E0E0",
+        "rating-true": "#544439",
       },
       borderRadius: {
         roundedImgSm: "12px",
