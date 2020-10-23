@@ -10,6 +10,7 @@ module.exports = {
         2: "2 2 0%",
       },
       maxHeight: {
+        80: "22rem",
         "drop-down-lg": "13rem",
         "drop-down-sm": "8rem",
       },

@@ -38,7 +38,7 @@ const CatPage = () => {
     fetchCat(id);
   }, [id]);
   return (
-    <div>
+    <div className="text-text-main">
       <div className="flex flex-col lg:flex-row  mt-3 px-3 sm:pr-14 sm:pl-7 lg:pr-28">
         <div className="relative self-center lg:self-start">
           <div className="hidden md:block w-5  h-80 absolute bg-back-thing top-0 transform -translate-x-2  md:translate-y-5 lg:translate-y-7 rounded-roundedImgDef"></div>
@@ -72,7 +72,7 @@ const CatPage = () => {
               <Image
                 src={img}
                 key={img}
-                styles="object-center object-cover rounded-roundedImgSm md:rounded-roundedImgDef w-full sm:h-40 sm:w-40 md:h-56 md:w-56 lg:h-64 lg:w-64"
+                styles="object-center object-cover rounded-roundedImgSm md:rounded-roundedImgDef w-full max-h-80 sm:h-40 sm:w-40 md:h-56 md:w-56 lg:h-64 lg:w-64"
                 effect="blur"
               />
             );

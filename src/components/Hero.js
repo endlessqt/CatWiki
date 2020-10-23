@@ -98,7 +98,7 @@ const Hero = ({ cats }) => {
             66+ Breeds For you to discover
           </h3>
           <div className="self-end">
-            <Button to="#" text="see more" />
+            <Button to={"/cats"} text="see more" />
           </div>
         </div>
         <div className="mt-6 md:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-x-3 sm:gap-x-4 md:gap-x-8 lg:gap-x-12 gap-y-6 sm:gap-y-0 relative">
@@ -126,5 +126,5 @@ const Hero = ({ cats }) => {
   );
 };
 
-//TODO BUTTON-LINK NEEDS "TO" PROP
+
 export default Hero;
