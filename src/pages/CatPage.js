@@ -66,7 +66,18 @@ const CatPage = () => {
         <h2 className="text-center sm:text-left font-semibold leading-7 sm:leading-10  text-3xl sm:text-4xl">
           Other photos
         </h2>
-        <div className="mt-5 md:mt-10">FOTO GRID</div>
+        <div className="mt-5 mb-10 sm:mb-20 md:mt-10 grid gap-y-6 sm:grid-cols-3 sm:gap-y-6 md:grid-cols-4 md:gap-x-2 ">
+          {cat.images?.map((img) => {
+            return (
+              <Image
+                src={img}
+                key={img}
+                styles="object-center object-cover rounded-roundedImgSm md:rounded-roundedImgDef w-full sm:h-40 sm:w-40 md:h-56 md:w-56 lg:h-64 lg:w-64"
+                effect="blur"
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
