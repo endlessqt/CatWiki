@@ -2,14 +2,14 @@ import React from "react";
 
 const CatStat = ({ name, value, additionalText }) => {
   return (
-    <div className="flex flex-col xl:flex-row text-base sm:text-lg leading-5">
+    <div className="flex flex-col lg:flex-row text-base sm:text-lg leading-5">
       <div className="font-bold text-center lg:text-center text-lg">
         {name}:{" "}
       </div>
       {isFinite(value) ? (
         <div>{value}</div>
       ) : (
-        <div className="xl:ml-1 mt-1 xl:mt-0 text-center font-medium xl:text-left">
+        <div className="xl:ml-1 mt-1 lg:mt-0 text-center font-medium xl:text-left">
           {value} {additionalText}
         </div>
       )}
