@@ -16,7 +16,7 @@ const CatCard = ({ cat, index }) => {
           />
         </Link>
       </div>
-      <div className="order-1 sm:order-2 flex-2 sm:ml-5 ">
+      <div className="order-1 sm:order-2 flex-2 sm:ml-5 self-start ">
         <Link
           to={`/cats/${cat.id}`}
           className="text-center lg:text-left font-semibold leading-7 sm:leading-10  text-3xl md:text-4xl hover:underline "
