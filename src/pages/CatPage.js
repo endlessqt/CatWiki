@@ -49,7 +49,7 @@ const CatPage = () => {
             effect="blur"
           />
         </div>
-        <div className="flex flex-col flex-1 sm:ml-16 lg:ml-28">
+        <div className="flex flex-col flex-1  lg:ml-28">
           <h2 className="text-center lg:text-left font-semibold leading-7 sm:leading-10  text-3xl sm:text-4xl">
             {cat.breedInfo?.name}
           </h2>
