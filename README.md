@@ -1,9 +1,4 @@
-- [Overview](#overview)
-  - [Built With](#built-with)
-- [Features](#features)
-- [Contact](#contact)
-
-## Overview
+# Overview
 
 ![screenshot](demo/cat-wiki-demo.gif)
 
@@ -11,12 +6,12 @@ This application hosted on [surge](https://catwiki.surge.sh/) and was created as
 
 I modified given user stories to focus mostly on front end part using default CatAPI.
 
-### Built With
+## Built With
 
 - [React](https://reactjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 
-### Contact
+## Contact
 
 All feedback appreciated!
 
