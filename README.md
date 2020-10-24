@@ -1,8 +1,3 @@
-- [Overview](#overview)
-  - [Built With](#built-with)
-- [Features](#features)
-- [Contact](#contact)
-
 ## Overview
 
 ![screenshot](demo/cat-wiki-demo.gif)
