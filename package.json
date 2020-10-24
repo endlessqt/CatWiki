@@ -17,8 +17,9 @@
   },
   "scripts": {
     "prestart": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "prebuild": "tailwind build src/assets/tailwind.css -o src/assets/main.css",
     "start": "react-scripts start",
-    "build": "npm run prestart && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
